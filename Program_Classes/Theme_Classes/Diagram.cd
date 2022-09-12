@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Theme_Classes.Adress" Collapsed="true">
+    <Position X="5.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAEAABAAAAAIAAAAAAAIACCACABA=</HashCode>
+      <FileName>Adress.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Theme_Classes.Human" Collapsed="true">
+    <Position X="1.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABIggABACAQAAAQECAAgwARCgAEAgBAQAAAAAEAAA=</HashCode>
+      <FileName>Human.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Theme_Classes.listHuman" Collapsed="true">
+    <Position X="7" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAiAAAIAAAQAAAEAAAAEAAAAACAIAABBAAAgAACAAA=</HashCode>
+      <FileName>ListHuman.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Theme_Classes.ListStudent" Collapsed="true">
+    <Position X="8.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIBAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>ListStudent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Theme_Classes.ListTeacher" Collapsed="true">
+    <Position X="5.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAACAAAAAAAAAEAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>ListTeacher.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Theme_Classes.Program" Collapsed="true">
+    <Position X="7" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Theme_Classes.Student" Collapsed="true">
+    <Position X="0.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAQAEAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>Student.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Theme_Classes.Teacher" Collapsed="true">
+    <Position X="2.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAiAAAAAgQAAAAAAAAAAQEAAAAAAABAAAAAACAAI=</HashCode>
+      <FileName>Teacher.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="Theme_Classes.Nation" Collapsed="true">
+    <Position X="5.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACEAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Human.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
