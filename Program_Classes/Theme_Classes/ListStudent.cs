@@ -34,5 +34,25 @@ namespace Theme_Classes
             Console.WriteLine(jsonString);
         }
 
+
+        public string StudentTxt()
+        {
+            string res = "";
+            for(int n = 0; n < List.Count; n++)
+            {
+                res += List[n].toStr();
+                res += "\n" + "-=-=-=-=-=-=-=-=-=-=-=-=-=-" + "\n";
+            }
+
+            return res;
+        }
+
+        public void TextWritter(string url)
+        {
+            StreamWriter sw = new StreamWriter(url);
+            sw.WriteLine(StudentTxt());
+            sw.Close();
+        }
+
     }
 }

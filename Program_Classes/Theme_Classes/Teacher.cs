@@ -3,13 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
+using System.Globalization;
+using System.Text.RegularExpressions;
+using System.IO;
+//using Newtonsoft.Json;
+using System.Xml.Serialization;
 
 namespace Theme_Classes
 {
+    public enum KeyWords { csharp, python, java, JS }
     class Teacher : Human
     {
         private int salary;
         private string department;
+        private int numofseats;
+        private KeyWords keywords;
         private List<Student> list;
 
         public Teacher() : base()
@@ -17,38 +26,56 @@ namespace Theme_Classes
             list = new List<Student>();
         }
         public Teacher(string name, string surname, int age, double height,
-            double weight, bool habbits, Nation nation, Adress adress, int salary, string department) : base(name, surname,
-                age, height, weight, habbits, nation, adress)
+            double weight, bool habbits, string email, Nation nation, Adress adress, int salary, string department, int numofseats, KeyWords keywords) : base(name, surname,
+                age, height, weight, habbits, email, nation, adress)
         {
             this.salary = salary;
             this.department = department;
+            this.numofseats = numofseats;
+            this.keywords = keywords;
             this.list = new List<Student>();
         }
-        public void add(Student human)
+
+        public void add(Student student)
         {
-            list.Add(human);
+            if (check_numofset(student.Key.ToString()))
+                list.Add(student);
+            else
+            {
+                Console.WriteLine("Мест нет либо интересы не совпадают!");
+            }
         }
+
         public void show()
         {
             for (int n = 0; n < list.Count(); n++)
                 list[n].printInfo();
         }
+
         public override void printInfo()
         {
             string data =
-               "Name: " + this._name + "\n" +
-               "Surname: " + this._surname + "\n" +
-               "Age: " + this._age.ToString() + "\n" +
-               "Height: " + this._height.ToString() + "\n" +
-               "Weight: " + this._weight.ToString() + "\n" +
-               "Is Habbits: " + this._habbits.ToString() + "\n" +
-               "Nation: " + this._nation.ToString() + "\n" +
-               "Adress: " + this._adress.toString() + "\n" +
+               base.toStr() + "\n" +
                "Salary: " + this.salary.ToString() + "\n" +
-               "Money: " + this.department;
+               "Money: " + this.department + "\n" +
+                "Number of set: " + this.numofseats.ToString() + "\n" +
+                "Key: " + this.keywords.ToString();
             Console.WriteLine(data);
 
         }
+
+        public bool check_numofset(string key)
+        {
+            bool flag = false;
+            if ((list.Count < numofseats) && (key == keywords.ToString()))
+                flag = true;
+            else
+            {
+                flag = false;
+            }
+            return flag;
+        }
+
         public int Salary
         {
             get { return salary; }
@@ -58,6 +85,16 @@ namespace Theme_Classes
         {
             get { return department; }
             set { department = value; }
+        }
+        public int NumOfSeats
+        {
+            get { return numofseats; }
+            set { numofseats = value; }
+        }
+        public KeyWords KeyWords
+        {
+            get { return keywords; }
+            set { keywords = value; }
         }
         public List<Student> List
         {

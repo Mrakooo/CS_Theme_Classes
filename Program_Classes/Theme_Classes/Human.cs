@@ -17,6 +17,7 @@ namespace Theme_Classes
         protected bool _habbits;
         protected Nation _nation;
         protected Adress _adress;
+        protected string _email;
 
 
         public Human()
@@ -30,8 +31,9 @@ namespace Theme_Classes
             this._habbits = false;
             this._nation = Nation.Ukranian;
             this._adress = new Adress();
+            this._email = "mrandoks@gmail.com";
         }
-        public Human(string name, string surname, int age, double height, double weight, bool habbits, Nation nation, Adress adress)
+        public Human(string name, string surname, int age, double height, double weight, bool habbits, string email, Nation nation, Adress adress)
         {
             this._name = name;
             this._surname = surname;
@@ -39,6 +41,7 @@ namespace Theme_Classes
             this._height = height;
             this._weight = weight;
             this._habbits = habbits;
+            this._email = email;
             this._nation = nation;
             this._adress = adress;
         }
@@ -68,6 +71,7 @@ namespace Theme_Classes
                 "Height: " + this._height.ToString() + "\n" +
                 "Weight: " + this._weight.ToString() + "\n" +
                 "Is Habbits: " + this._habbits.ToString() + "\n" +
+                "Email: " + this._email + "\n" +
                 "Nation: " + this._nation.ToString() + "\n" +
                 "Adress: " + this._adress.toString();
             Console.WriteLine(data);
@@ -81,11 +85,13 @@ namespace Theme_Classes
                 "Height: " + this._height.ToString() + "\n" +
                 "Weight: " + this._weight.ToString() + "\n" +
                 "Is Habbits: " + this._habbits.ToString() + "\n" +
+                "Email: " + this._email + "\n" +
                 "Nation: " + this._nation.ToString() + "\n" +
                 "Adress: " + this._adress.toString();
             return str;
         }
-        public static void inputInfo(listHuman list)
+
+        public virtual void inputInfo(listHuman list)
         {
             Console.WriteLine("Name: ");
             string name = Console.ReadLine();
@@ -99,11 +105,13 @@ namespace Theme_Classes
             double weight = double.Parse(Console.ReadLine());
             Console.WriteLine("Habbits: ");
             bool habbits = bool.Parse(Console.ReadLine());
+            Console.WriteLine("Email: ");
+            string email = Console.ReadLine();
             Console.WriteLine("Nation: ");
             //Nation nation = (Nation)Enum.Parse(typeof(Nation), Console.ReadLine(), true);
             Nation nation = (Nation)Enum.Parse(typeof(Nation), Console.ReadLine(), true);
             Adress adr = new Adress();
-            Human n = new Human(name, surname, age, height, weight, habbits, nation, adr.inputadress());
+            Human n = new Human(name, surname, age, height, weight, habbits, email, nation, adr.inputadress());
             list.add(n);
         }
         public string Name
@@ -141,7 +149,11 @@ namespace Theme_Classes
             get { return _habbits; }
             set { _habbits = value; }
         }
-
+        public string Email
+        {
+            get { return _email; }
+            set { _email = value; }
+        }
         public Nation Nation
         {
             get { return _nation; }
